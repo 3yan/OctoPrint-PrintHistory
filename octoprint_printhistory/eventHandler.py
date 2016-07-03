@@ -72,6 +72,10 @@ def eventHandler(self, event, payload):
                 currentFile["printTime"] = printTime
                 self._console_logger.info("PrintTime: %s" % printTime)
 
+	# Who worked on printer
+	if "username" in fileData:
+		username = last["username"]	    
+
         # when print happened and what was result
         if "history" in fileData:
             history = fileData["history"]
